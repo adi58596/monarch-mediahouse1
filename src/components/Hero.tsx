@@ -1,22 +1,39 @@
 
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white to-orange-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-slide-up">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-on-scroll">
             not just <span className="text-gradient">grey</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 animate-slide-up" style={{animationDelay: '0.2s'}}>
+          <p className="text-xl md:text-2xl text-gray-600 font-light animate-on-scroll" style={{animationDelay: '0.2s'}}>
             We explore emotion, contrast, contradiction — a bold spectrum for your brand's social media presence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay: '0.4s'}}>
-            <Button size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll" style={{animationDelay: '0.4s'}}>
+            <Button size="lg" className="hover-lift text-lg px-8" asChild>
               <a href="#contact">Start Your Project</a>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="hover-lift text-lg px-8" asChild>
               <a href="#services">Explore Services</a>
             </Button>
           </div>

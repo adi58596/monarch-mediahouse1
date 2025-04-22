@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 const stats = [
   { value: "5M+", label: "Views" },
@@ -7,20 +8,40 @@ const stats = [
 ];
 
 const Results = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="results" className="py-20 bg-gradient-to-br from-orange-50 to-purple-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-on-scroll">
             Results That Speak
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
+            {stats.map((stat, index) => (
+              <div 
+                key={stat.label} 
+                className="text-center animate-on-scroll hover-lift"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-gray-600 font-light">{stat.label}</div>
               </div>
             ))}
           </div>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 const services = [
   {
@@ -23,22 +24,38 @@ const services = [
 ];
 
 const Services = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center animate-on-scroll">
             Our Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className="p-8 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors"
+                className="p-8 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-all duration-300 hover-lift animate-on-scroll"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-gray-600 font-light">{service.description}</p>
               </div>
             ))}
           </div>
