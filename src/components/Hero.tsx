@@ -1,23 +1,8 @@
-
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Hero = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-      observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  useScrollAnimation();
 
   return (
     <section className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white to-orange-50">

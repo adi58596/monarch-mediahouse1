@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const stats = [
   { value: "5M+", label: "Views" },
@@ -8,21 +8,7 @@ const stats = [
 ];
 
 const Results = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-      observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  useScrollAnimation();
 
   return (
     <section id="results" className="py-20 bg-gradient-to-br from-orange-50 to-purple-50">
