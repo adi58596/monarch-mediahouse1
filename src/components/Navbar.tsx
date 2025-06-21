@@ -51,7 +51,7 @@ const Navbar = () => {
               <a href="#portfolio" className="https://www.canva.com/design/DAGZcDmFDx4/YQTosCcjphK7ysx-hsni5A/view?utm_content=DAGZcDmFDx4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5cd428a90e">Portfolio</a>
               <Button asChild className="w-full">
                 
-         <a Book a call href="https://calendly.com/adisworkchamber/virtual-cup-of-coffee" target="_blank" rel="noopener noreferrer">
+          Book a call href="https://calendly.com/adisworkchamber/virtual-cup-of-coffee" target="_blank" rel="noopener noreferrer">
 
                 </a>
               </Button>
