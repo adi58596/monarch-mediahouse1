@@ -15,10 +15,10 @@ const Hero = () => {
           animationDelay: '0.4s'
         }}>
             <Button size="lg" className="hover-lift text-lg px-8" asChild>
-              <a href="#contact">Start Your Project</a>
+              <a href="#contact" className="">View Our Portfolio</a>
             </Button>
             <Button variant="outline" size="lg" className="hover-lift text-lg px-8" asChild>
-              <a href="#services">Explore Services</a>
+              <a href="#services">Book a call</a>
             </Button>
           </div>
         </div>
