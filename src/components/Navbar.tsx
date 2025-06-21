@@ -48,17 +48,11 @@ const Navbar = () => {
             <div className="flex flex-col gap-4">
               <a href="#services" className="hover:text-primary transition-colors">Services</a>
               <a href="#results" className="hover:text-primary transition-colors">Results</a>
-              <a href="#portfolio" className="
-👏
-👍
-😊
-
-
-
-https://www.canva.com/design/DAGZcDmFDx4/YQTosCcjphK7ysx-hsni5A/view?utm_content=DAGZcDmFDx4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5cd428a90e">Portfolio</a>
+              <a href="#portfolio" className="https://www.canva.com/design/DAGZcDmFDx4/YQTosCcjphK7ysx-hsni5A/view?utm_content=DAGZcDmFDx4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5cd428a90e">Portfolio</a>
               <Button asChild className="w-full">
-                <a href="https://calendly.com/adisworkchamber/virtual-cup-of-coffee" target="_blank" rel="noopener noreferrer">
-                  Book a call
+                
+         <a Book a call href="https://calendly.com/adisworkchamber/virtual-cup-of-coffee" target="_blank" rel="noopener noreferrer">
+
                 </a>
               </Button>
             </div>
