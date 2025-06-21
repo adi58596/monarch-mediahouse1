@@ -20,7 +20,7 @@ const Hero = () => {
             animationDelay: '0.4s'
           }}>
             <Button size="lg" className="hover-lift text-lg px-8" asChild>
-              <a href="https://your-portfolio-website.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.canva.com/design/DAGZcDmFDx4/YQTosCcjphK7ysx-hsni5A/view?utm_content=DAGZcDmFDx4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5cd428a90e" target="_blank" rel="noopener noreferrer">
                 View Our Portfolio
               </a>
             </Button>
