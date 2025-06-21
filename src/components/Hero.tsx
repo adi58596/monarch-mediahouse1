@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -9,7 +10,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-on-scroll">
-            not just <span className="text-gradient">grey</span>
+            We help brands create <span className="text-gradient">Intentional</span> and <span className="text-gradient">ROI driven</span> content
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 font-light animate-on-scroll" style={{animationDelay: '0.2s'}}>
             We explore emotion, contrast, contradiction — a bold spectrum for your brand's social media presence.
