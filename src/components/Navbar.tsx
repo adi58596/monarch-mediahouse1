@@ -30,7 +30,7 @@ const Navbar = () => {
               Portfolio
             </a>
             <Button asChild>
-              <a href="https://calendly.com/your-booking-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/adisworkchamber/virtual-cup-of-coffee?month=2025-06" target="_blank" rel="noopener noreferrer">
                 Book a call
               </a>
             </Button>
