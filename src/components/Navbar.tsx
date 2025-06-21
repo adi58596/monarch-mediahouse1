@@ -26,7 +26,7 @@ const Navbar = () => {
             <a href="#results" className="hover:text-primary transition-colors">
               Results
             </a>
-            <a href="#portfolio" className="https://www.canva.com/design/DAGZcDmFDx4/YQTosCcjphK7ysx-hsni5A/view?utm_content=DAGZcDmFDx4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5cd428a90e">
+            <a href="#portfolio" className="hover:text-primary transition-colors">
               Portfolio
             </a>
             <Button asChild>
