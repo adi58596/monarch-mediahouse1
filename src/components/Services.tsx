@@ -20,7 +20,7 @@ const services = [
 ];
 
 const perfMarketing = {
-  title: "Performance Marketing",
+    title: "Performance Marketing",
   description: "Data-driven marketing campaigns for measurable results",
 };
 
