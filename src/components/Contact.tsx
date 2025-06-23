@@ -14,13 +14,21 @@ const Contact = () => {
           }}>
             Let's create something extraordinary together
           </p>
-          <Button size="lg" className="text-lg px-8 hover-lift animate-on-scroll" style={{
-            animationDelay: '0.4s'
-          }} asChild>
-            <a href="https://calendly.com/your-booking-link" target="_blank" rel="noopener noreferrer">
+          <Button
+            size="lg"
+            className="text-lg px-8 hover-lift animate-on-scroll bg-[#FF7A1A] text-white hover:bg-[#377453] transition-colors duration-300"
+            style={{ animationDelay: '0.4s' }}
+            asChild
+          >
+            <a
+              href="https://calendly.com/adii_/let-s-catch-up"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Book a call
             </a>
           </Button>
+
         </div>
       </div>
     </section>
