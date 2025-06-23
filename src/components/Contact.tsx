@@ -1,11 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Contact = () => {
   useScrollAnimation();
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-on-scroll">Ready to Stand Out?</h2>
